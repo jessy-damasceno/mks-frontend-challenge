@@ -13,6 +13,7 @@
     "@emotion/styled": "latest",
     "@mui/icons-material": "next",
     "@mui/material": "next",
+    "framer-motion": "^11.0.28",
     "react": "latest",
     "react-dom": "latest"
   },
