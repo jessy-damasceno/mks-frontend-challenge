@@ -1,0 +1,57 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "jest": true
+  },
+  "extends": ["plugin:react/recommended", "standard", "prettier"],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "plugins": [
+    "react",
+    "prettier",
+    "import-helpers",
+    "eslint-plugin-import-helpers"
+  ],
+  "rules": {
+    "react/display-name": [0, { "ignoreTranspilerName": true }],
+    "prettier/prettier": "error",
+    "space-before-function-paren": "off",
+    "semi": ["error", "always", { "omitLastInOneLineBlock": true }],
+    "react/prop-types": "off",
+    "import-helpers/order-imports": [
+      "warn",
+      {
+        "newlinesBetween": "always",
+        "groups": [
+          "/^react/",
+          "module",
+          "/^@material-ui/",
+          "/^@unform/",
+          "/^~/contexts/",
+          "/^~/assets/img/",
+          "/^~/containers/",
+          "/^~/pages/",
+          "/^~/components/",
+          "/^~/services/",
+          "/^~/constants/",
+          "/^~/utils/",
+          "/^./components/",
+          "/^~/",
+          ["parent", "sibling", "index"]
+        ],
+        "alphabetize": { "order": "asc", "ignoreCase": true }
+      }
+    ]
+  },
+  "settings": {
+    "react": {
+      "version": "17.0.2"
+    }
+  }
+}
